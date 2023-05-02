@@ -1,0 +1,35 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="" (click)="drawer.toggle()">Home</a>
+      <a mat-list-item routerLink="about" (click)="drawer.toggle()">About</a>
+      <a mat-list-item routerLink="/tags" (click)="drawer.toggle()">Categories</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div class="left">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+        >
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <a id="title" routerLink="">Branch out</a>
+      </div>
+      <div class="right">
+        <mat-icon fontIcon="person"></mat-icon>
+        <mat-icon fontIcon="favorite"></mat-icon>
+        <mat-icon matBadge="5" matBadgeColor="accent" fontIcon="shopping_cart" ></mat-icon>
+    </div>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

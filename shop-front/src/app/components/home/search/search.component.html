@@ -1,0 +1,9 @@
+<div class="search-bar">
+    <input #s class="search-control"  type="text" placeholder="Search" 
+    (keyup.enter)="search(s.value)" 
+    [value]="searchTerm" />
+    <button (click)="search(s.value)">
+        <span>Search</span> 
+        <mat-icon class="search-icon">search</mat-icon>
+    </button>
+</div>

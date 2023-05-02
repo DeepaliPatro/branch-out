@@ -1,0 +1,32 @@
+@import "../../styles/styles.scss";
+
+.plant-cards {
+    display: flex;
+    padding: 10px 15px;
+    gap: 10px;
+    @include md {
+        max-width: 500px;
+        flex-direction: row;
+    }
+    .plant-card{
+        width: 80%;
+        img {
+            width: 100%;
+        }
+        mat-card-content{
+            display: flex;
+            justify-content: space-between;
+        }
+        mat-card-actions {
+            display: flex;
+            justify-content: space-between;
+            button {
+                margin: 0;
+                &:hover{
+                    background-color: green;
+                    color: white;
+                }
+            }
+        }
+    }
+}

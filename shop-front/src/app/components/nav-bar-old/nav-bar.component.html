@@ -1,0 +1,27 @@
+<mat-toolbar class="nav-bar">
+    <div class="left">
+        <button mat-icon-button class="menu" *ngIf="isMobileLayout" >
+            <mat-icon>menu</mat-icon>
+        </button>
+        <ul *ngIf="!isMobileLayout">
+            <li>Home</li>
+            <li>About</li>
+            <li>Categories</li>
+        </ul>
+    </div>
+    <div class="center">
+        <span>Paint me green!</span>
+    </div>
+    <div class="right">
+        <mat-icon fontIcon="search"></mat-icon>
+        <mat-icon fontIcon="person"></mat-icon>
+        <mat-icon fontIcon="favorite"></mat-icon>
+        <mat-icon matBadge="5" matBadgeColor="primary" fontIcon="shopping_cart" ></mat-icon>
+        <!-- <span
+            class="cart-icon"
+        >
+            <mat-icon fontIcon="shopping_cart"></mat-icon>
+            <span>3</span>
+        </span> -->
+    </div>
+</mat-toolbar>

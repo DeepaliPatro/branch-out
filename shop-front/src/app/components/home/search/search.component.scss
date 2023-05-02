@@ -1,0 +1,64 @@
+@import "../../../styles/styles.scss";
+
+.search-bar {
+    margin: 5px auto;
+	width: 80%;
+	max-width: 700px;
+	display: flex;
+	align-items: center;
+	column-gap: 2rem;
+	padding-left: 0.8rem;
+	background: white;
+	border-radius: 0.8rem;
+	height: 35px;
+	border: 0.1rem solid black;
+	border-right: none;
+    @include md {
+        height: 50px;
+        border-radius: 1rem;
+        margin: 10px auto;
+        padding-left: 2rem;
+    }
+    input {
+        height: 100%;
+        width: 100%;
+        flex: 1 1 25rem;
+        background: white;
+        display: flex;
+        outline: none;
+        border: none;
+        color: black;
+        font-size: 1.1rem;
+        @include md {
+            font-size: 1.4rem;
+        }
+    }
+    button {
+        background: green;
+        color: white;
+        border: none;
+        border-radius: 0 0.8rem 0.8rem 0;
+        height: 100%;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-align: center;
+        @include md {
+            border-radius: 0 1rem 1rem 0;
+        }
+        span {
+            display: none;
+            @include md {
+                display: flex;
+                font-weight: 500;
+                font-size: 1.4rem;
+            }
+        }
+        .search-icon {
+            display: flex;
+            @include md {
+                display: none;
+            }
+        }
+    }
+
+}

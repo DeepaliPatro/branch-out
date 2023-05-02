@@ -1,0 +1,49 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<app-banner></app-banner>
+<!-- <ul>
+    <li *ngFor="let plant of plants">
+      <a routerLink="/plant/{{plant.id}}">
+        <img [src]="plant.imageUrl" [alt]="plant.name" />
+        <div class="content">
+          <div class="name">
+            {{plant.name}}
+          </div>
+          <span class="favorite {{plant.favorite?'':'not'}}">
+            ❤
+          </span>
+          <div class="stars">
+            <star-rating [value]="plant.stars" [totalstars]="5" checkedcolor="red" uncheckedcolor="black" size="22px"
+              [readonly]="true">
+            </star-rating>
+          </div>   
+          <div class="price">
+            <span>
+              {{plant.price | currency}}
+            </span>
+          </div>
+        </div>
+      </a>
+    </li>
+</ul> -->
+<div class="plant-cards">
+  <mat-card *ngFor="let plant of plants" class="plant-card">
+    <a routerLink="/plant/{{plant.id}}">
+      <img [src]="plant.imageUrl" [alt]="plant.name" />
+      <mat-card-content>
+          <p>
+            {{plant.name}}
+          </p>
+          <span>
+            {{plant.price | currency}}
+          </span>
+      </mat-card-content>
+      <mat-card-actions>
+        <span class="favorite {{plant.favorite?'':'not'}}">
+          ❤
+        </span>
+        <button mat-raised-button color="primary">Add to Cart</button>
+      </mat-card-actions>
+    </a>
+  </mat-card>
+</div>
