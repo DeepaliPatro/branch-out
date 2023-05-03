@@ -11,7 +11,7 @@
             <span>
               {{plant.price | currency}}
             </span>
-            <div class="rating"></div>
+            <rating [max]="5" [readonly]="true"></rating>
           </mat-card-subtitle>
         </mat-card-title-group>
       </mat-card-header>

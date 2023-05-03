@@ -1,10 +1,27 @@
 <div class="hero-banner">
-    <div class="content">
+    <!-- <div class="content">
         <div class="banner-text">
             <h3>20% off All Items</h3>
             <h1>Winter Collection 2023</h1>
             <button>SHOP NOW</button>
         </div>
         <img class="banner-img" src="../../../../assets/banner-image.png" />
-    </div>
+    </div> -->
+    <carousel [noPause]="false">
+        <slide class="carouser-banner" style="height: 300px;" >
+            <img src="../../../../assets/banner-image.png" alt="First slide" style="display: block; width: 100%;" >
+            <div class="carousel-caption d-none d-md-block">
+                <h3>20% off All Items</h3>
+                <h1>Winter Collection 2023</h1>
+                <button>SHOP NOW</button>
+            </div>
+        </slide>
+        <slide class="carouser-banner" style="height: 300px;" >
+            <img src="../../../../assets/plant2.jpeg" alt="Second slide" style="display: block; width: 100%;" >
+            <div class="carousel-caption d-none d-md-block">
+                <h3>New Arrivals</h3>
+                <button>SHOP NOW</button>
+            </div>
+        </slide>
+    </carousel>
 </div>

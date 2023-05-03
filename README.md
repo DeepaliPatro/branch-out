@@ -19,6 +19,7 @@ This project is a fullstack e-commerce application for a garden center.
 - Typescript
 - SCSS
 - Angular Material
+- Ngx Bootstrap
 - Angular FontAwsome
 
 # Features

@@ -1,6 +1,6 @@
+<app-banner></app-banner>
 <app-search></app-search>
 <app-tags></app-tags>
-<app-banner></app-banner>
 <!-- <ul>
     <li *ngFor="let plant of plants">
       <a routerLink="/plant/{{plant.id}}">
@@ -37,6 +37,7 @@
           <span>
             {{plant.price | currency}}
           </span>
+          <rating [max]="5" [readonly]="true"></rating>
       </mat-card-content>
       <mat-card-actions>
         <span class="favorite {{plant.favorite?'':'not'}}">

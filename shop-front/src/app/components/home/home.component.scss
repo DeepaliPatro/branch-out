@@ -2,14 +2,20 @@
 
 .plant-cards {
     display: flex;
+    flex-wrap: wrap;
     padding: 10px 15px;
     gap: 10px;
     @include md {
-        max-width: 500px;
         flex-direction: row;
     }
     .plant-card{
-        width: 80%;
+        width: 160px;
+        max-width: 80%;
+        overflow: hidden;
+        @include md {
+            max-width: 500px;
+            width: 250px;
+        }
         img {
             width: 100%;
         }

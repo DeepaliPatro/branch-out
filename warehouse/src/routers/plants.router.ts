@@ -20,6 +20,11 @@ import { Plant } from "../db/models/plant.model";
 //    }
 // )
 
+router.post('/', async (req, res) => {
+  Plant.create(req.body)
+      .then(dbRes => res.send("New plant added!"))
+})
+
 router.get('/', async (req, res) => {
   const plants = await Plant.find();
   res.json(plants);
